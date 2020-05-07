@@ -67,6 +67,7 @@ public class PoetryPresenter extends BasePresenter<IPoetryContract.IPoetryView>i
             {
                 getMvpView().onError(e.getMessage());
                 Log.d(TAG, "onError: "+e.getMessage());
+                Log.d(TAG, "onError: "+e.getMessage());
 
 
             }
