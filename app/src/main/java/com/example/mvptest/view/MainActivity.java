@@ -56,8 +56,15 @@ public class MainActivity extends BaseMvpActivity<MainActivity, PoetryPresenter>
     @Override
     public void searchSuccess(String author)
     {
-     mAuthor.setText(author);
+     //mAuthor.setText(author);
     }
+
+    @Override
+    public void searchContent(String content)
+    {
+        mAuthor.setText(content);
+    }
+
 
     @Override
     public void showProgressDialog()
@@ -82,9 +89,11 @@ public class MainActivity extends BaseMvpActivity<MainActivity, PoetryPresenter>
         switch (view.getId()){
             case R.id.btn_getAuthor:
                 getPresenter().getPoetry();
+                Log.e(TAG, "onViewClicked: " );
                 break;
             case R.id.btn_choose:
                 startFragment(R.id.ll,new AuthorFragment());
+                Log.e(TAG, "onViewClick: " );
         }
 
     }

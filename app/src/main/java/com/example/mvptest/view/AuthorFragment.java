@@ -1,6 +1,7 @@
 package com.example.mvptest.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.CollapsibleActionView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,8 @@ import com.example.mvptest.presenter.PoetryPresenter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * @author WangXiangDong
@@ -50,6 +53,13 @@ public class AuthorFragment extends BaseFragment<PoetryPresenter> implements IPo
     public void searchSuccess(String author)
     {
         fg_author.setText(author);
+        Log.e(TAG, "searchSuccess: "+author);
+    }
+
+    @Override
+    public void searchContent(String content)
+    {
+
     }
 
     @Override
@@ -69,15 +79,10 @@ public class AuthorFragment extends BaseFragment<PoetryPresenter> implements IPo
     {
         Toast.makeText(MyApplication.getContext(),result,Toast.LENGTH_SHORT).show();;
     }
-    @OnClick({R.id.btn_fg_getAuthor})
-    public void onViewClicked(View view){
-        switch (view.getId()){
-            case R.id.btn_fg_getAuthor:
+    @OnClick(R.id.btn_fg_getAuthor)
+    public void onViewClicked(){
                 getPresenter().getPoetry();
-                break;
-
+                Log.e(TAG, "onViewClicked: " );
         }
 
-
-    }
 }

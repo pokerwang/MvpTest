@@ -76,6 +76,7 @@ public class PoetryPresenter extends BasePresenter<IPoetryContract.IPoetryView>i
             {
                 if (mPoetryEntity!=null){
                     getMvpView().searchSuccess(mPoetryEntity.getAuthor());
+                    getMvpView().searchContent(mPoetryEntity.getContent());
                 }
 
             }

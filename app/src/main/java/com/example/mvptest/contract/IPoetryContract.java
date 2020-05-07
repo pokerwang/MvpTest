@@ -27,6 +27,7 @@ public interface IPoetryContract
          *
          */
         void searchSuccess(String author);
+        void searchContent(String content);
 
     }
 

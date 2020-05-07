@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 import java.lang.annotation.Target;
 import java.util.logging.Logger;
 
+import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
@@ -89,6 +90,7 @@ public abstract class BaseFragment<P extends BasePresenter >extends Fragment imp
                              @Nullable Bundle savedInstanceState)
     {
         view=initView(inflater,container,savedInstanceState);
+        unbinder = ButterKnife.bind(this, view);
         return view;
 
     }
