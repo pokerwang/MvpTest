@@ -1,0 +1,13 @@
+{
+  "errorCode": 0,
+  "data": {
+    "url": "https://www.wanandroid.com/blogimgs/525fd8a7-14fb-428c-acc3-dde83148ebd1.apk",
+    "url_backup": "",
+    "version_name": "1.5.5",
+    "version_code": 47,
+    "force": false,
+    "desc": "1.【新增】消息提醒，不用登陆网页端也可查看最新消息\n2.【优化】每次下拉刷新显示不一样的古诗句",
+    "time": "2020-05-17"
+  },
+  "errorMsg": ""
+}
